@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-extraction-auditor"
+version = "0.1.0"
+authors = [
+  { name="jdewards619-byte" },
+]
+description = "Lightweight diagnostic linter for LLM extractions (catches dropped braces, markdown leaks, and hallucinations)."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "pydantic>=2.0.0",
+    "json-repair>=0.25.0",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+
+"Homepage" = "https://github.com/jdewards619-byte/llm-extraction-auditor"
+"Bug Tracker" = "https://github.com/jdewards619-byte/llm-extraction-auditor/issues"
+
+[tool.setuptools]
+py-modules = ["test_live_audit"]
